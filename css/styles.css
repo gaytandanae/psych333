@@ -7621,6 +7621,13 @@ textarea.form-control-lg {
   margin-top: 3rem !important;
 }
 
+
+.mt-6 {
+  font-family: "Garamond", Times, serif;
+  font-size: 20pt;
+}
+
+
 .mt-auto {
   margin-top: auto !important;
 }

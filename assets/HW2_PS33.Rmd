@@ -1,0 +1,59 @@
+```{r initiatePackages, message=FALSE}
+## you can add more, or change...these are suggestions
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+**The following questions involve an outside dataset.**
+
+We will be working with a dataset from the "Kaggle" website, which hosts competitions for prediction and machine learning. More details on this dataset are here: <https://www.kaggle.com/c/DontGetKicked/overview/background>.
+
+5\. Bring the dataset into R. The dataset is located at: <https://jhudatascience.org/intro_to_r/data/kaggleCarAuction.csv>. You can use the link, download it, or use whatever method you like for getting the file. Once you get the file, read the dataset in using `read_csv()` and assign it the name `cars`.
+
+```{r}
+#
+```
+
+6\. Import the data "dictionary" from <https://jhudatascience.org/intro_to_r/data/Carvana_Data_Dictionary_formatted.txt>. Use the `read_tsv()` function and assign it the name "key".
+
+```{r}
+#
+```
+
+7\. You should now be ready to work with the "cars" dataset.
+
+(a) Preview the data so that you can see the names of the columns. There are several possible functions to do this.
+(b) Determine the class of the first three columns using `str()`. Write your answer as a comment inside the R chunk below.
+
+```{r}
+#
+```
+
+8\. How many cars (rows) are in the dataset? How many variables (columns) are recorded for each car?
+
+```{r}
+#
+```
+
+9\. Filter out (i.e., remove) any vehicles that cost less than or equal to \$5000 ("VehBCost") or that have missing values. Replace the original "cars" object by reassigning the new filtered dataset to "cars". How many vehicles are left after filtering?
+
+**Hint:** The `filter()` function also removes missing values.
+
+```{r}
+#
+```
+
+10\. From this point on, work with the filtered "cars" dataset from the above question. Given the average car loan today is 70 months, create a new variable (column) called "MonthlyPrice" that shows the monthly cost for each car (Divide "VehBCost" by 70). Check to make sure the new column is there.
+
+**Hint:** use the `mutate()` function.
+
+```{r}
+#
+```
+
+F. Knit your document into a report.
+
+You use the knit button to do this. Make sure all your code is working first!
