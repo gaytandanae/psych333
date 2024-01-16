@@ -1,0 +1,45 @@
+---
+title: "DataWrangling"
+author: "Margot Kades"
+date: "2024-01-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+# Loading Libraries 
+
+```{r}
+{r}
+library(tidyverse)
+library(psych)
+library(rmarkdown)
+library(moments)
+library(dplyr)
+```
+
+# Reading in Data 
+
+```{r}
+{r}
+#setwd tells R where to look to look for your data. If you do not tell it the correct working directory it will give you an error. 
+setwd("/Users/d.gaytan/Library/CloudStorage/Box-Box/neg_exp")
+
+#this is actually grabbing the data from your computer and putting it in R. In this case (since I am basic) I choose to name my data data. read.csv is the function and the file name goes inside the parantheses and then inside the commas. 
+data = read.csv("clean_data.csv")
+
+#I then tell R that I want you to omit any incomplete data and to save it as a dataframe named data. 
+data<-na.omit(data)
+
+#view the dataframe, I just like to check to make sure everything looks good. 
+view(data)
+
+#renaming columns for easier coding: Week#1 work begins here 
+colnames(data)[colnames(data) == "Q71"] <- "attn_check"
+```
